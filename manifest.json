@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Adidas ATC",
+  "description": "Adidas add to cart with stock checking functionality.",
+  "version": "1.0.0",
+  "browser_action": {
+    "default_popup": "/html/popup.html",
+    "default_name": "Adidas Add to Cart"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["/js/popup.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": ["activeTab", "tabs", "*://*.adidas.com/*", "*://adidas.ca/*", "*://*.cloudfront.net/*", "unlimitedStorage", "storage", "cookies", "webRequest", "webRequestBlocking"]
+}
