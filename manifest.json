@@ -1,18 +1,35 @@
 {
   "manifest_version": 2,
-  "name": "Adidas ATC",
-  "description": "Adidas add to cart with stock checking functionality.",
-  "version": "1.0.0",
+  "name": "Cook.ie",
+  "description": "Checks to see if your tab passed splash page, mainly for task bots.",
+  "version": "3.5.0",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
   "browser_action": {
-    "default_popup": "/html/popup.html",
-    "default_name": "Adidas Add to Cart"
+    "default_name": "Cook.ie",
+    "default_icon": "icon16.png"
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
-      "js": ["/js/popup.js"],
-      "run_at": "document_end"
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "jquery-3.2.1.min.js",
+        "content.js"
+      ]
     }
   ],
-  "permissions": ["activeTab", "tabs", "*://*.adidas.com/*", "*://adidas.ca/*", "*://*.cloudfront.net/*", "unlimitedStorage", "storage", "cookies", "webRequest", "webRequestBlocking"]
+  "background": {
+    "background_page": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "background",
+    "tabs",
+    "notifications"
+  ]
 }
