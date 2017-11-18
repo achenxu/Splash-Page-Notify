@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Splash Page Notify.iml" filepath="$PROJECT_DIR$/Splash Page Notify.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Splash-Page-Notify.iml" filepath="$PROJECT_DIR$/.idea/Splash-Page-Notify.iml" />
     </modules>
   </component>
 </project>

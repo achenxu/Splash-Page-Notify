@@ -9,12 +9,11 @@ function checkForCircle() {
     const circle = $(".sk-fading-circle");
 
     if (circle[0]) {
-        console.log('Waiting to pass splash, refreshing in 5 seconds.');
-        setTimeout(checkForCircle, 5000);
-    } else {
         console.log("Trying for keyword.");
         findKeyword();
-
+    } else {
+        console.log('Waiting to pass splash, refreshing in 5 seconds.');
+        setTimeout(checkForCircle, 5000);
     }
 }
 
@@ -28,7 +27,6 @@ function findKeyword() {
             window.focus();
             this.cancel();
         };
-        found.show();
     }
 }
 
